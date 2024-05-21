@@ -748,6 +748,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#area">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -795,6 +796,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#designation">
         <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
 
@@ -868,6 +870,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#isBroken -->
 
     <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isBroken">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -903,6 +906,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#isavailable -->
 
     <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isavailable">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -925,6 +929,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#isworking -->
 
     <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isworking">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
