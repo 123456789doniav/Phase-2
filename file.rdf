@@ -248,6 +248,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#hasIntrument -->
 
     <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasIntrument">
+        <rdfs:range rdf:resource="&GAZ;ERO_0000004"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
