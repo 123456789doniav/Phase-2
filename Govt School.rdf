@@ -1,0 +1,2865 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "https://schema.org/" >
+    <!ENTITY tree "http://purl.dataone.org/odo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY GAZ "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY School "http://purl.obolibrary.org/obo/gsso.owl#" >
+    <!ENTITY Guard "http://purl.bioontology.org/ontology/LNC/" >
+    <!ENTITY plant "http://purl.bioontology.org/ontology/STY/" >
+    <!ENTITY print "http://purl.bioontology.org/ontology/MESH/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY air "http://purl.bioontology.org/ontology/SNOMEDCT/" >
+    <!ENTITY Thesaurus "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/pmyls/ontologies/2024/4/untitled-ontology-33#"
+     xml:base="http://www.semanticweb.org/pmyls/ontologies/2024/4/untitled-ontology-33"
+     xmlns:plant="http://purl.bioontology.org/ontology/STY/"
+     xmlns:print="http://purl.bioontology.org/ontology/MESH/"
+     xmlns:Thesaurus="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+     xmlns:schema="https://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tree="http://purl.dataone.org/odo/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:GAZ="http://purl.obolibrary.org/obo/"
+     xmlns:air="http://purl.bioontology.org/ontology/SNOMEDCT/"
+     xmlns:Guard="http://purl.bioontology.org/ontology/LNC/"
+     xmlns:School="&GAZ;gsso.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pmyls/ontologies/2024/4/untitled-ontology-33">
+        <rdfs:isDefinedBy>Mehak and Memoona</rdfs:isDefinedBy>
+        <rdfs:comment>This ontology covers the issue of the resources management of govt school in sargodha.</rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#admissionControllerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#admissionControllerOf">
+        <rdfs:comment>reprsent the admission controller  which is responsible  for the admission related tasks of  a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasAdmissionController"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#biologyLabOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#biologyLabOf">
+        <rdfs:comment>reprsents the biology lab where studnets perform the biology practicals in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Biology_Lab"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasBiologyLab"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#chemistryLabOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#chemistryLabOf">
+        <rdfs:comment>reprsents the chemistry lab where students perform the chemistry practicals in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Chemisrty_Lab"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasChemistryLab"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#computerLabOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#computerLabOf">
+        <rdfs:comment>reprsents the computer lab where students perform the computer practicals in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Computer_Lab"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasComputerLab"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasAdmissionController -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasAdmissionController">
+        <rdfs:comment>govt school has a admission controller which deal with addmission relay]ted tasks</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasAirConditioner -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasAirConditioner">
+        <rdfs:comment>represents the wall or window air conditioners in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&air;15000008"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasBiologyLab -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasBiologyLab">
+        <rdfs:comment>it reprsents that the govt school has  a biology lab for biological experiments and practicals</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Biology_Lab"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCamera -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCamera">
+        <rdfs:comment>it represents the security cameras that are avaible in the govt school for monitoring purpose</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Security_Camera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCanteen -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCanteen">
+        <rdfs:comment>reprsents the place from where the student can buy things in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Canteen"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasChemistryLab -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasChemistryLab">
+        <rdfs:comment>it reprsents that the govt school has  a chemistry lab for chemistry experiments and practicals</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Chemisrty_Lab"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasClass">
+        <rdfs:comment>reprsents the class name of the govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C25346"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasClerk -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasClerk">
+        <rdfs:comment>represents the person who manage the administratorial task of the govt schooll</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C75552"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasComputer -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasComputer">
+        <rdfs:comment>reprsents the number of computers in a computer lab</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C16464"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Computer_Lab"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasComputerLab -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasComputerLab">
+        <rdfs:comment>it reprsents that the govt school has  a computer lab for computer experiments and practicals</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Computer_Lab"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCourseFacility -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCourseFacility">
+        <rdfs:comment>reprsents the course book avaible in the library</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseFacility"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCuboard -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCuboard">
+        <rdfs:comment>reprsent the storage space for the teacher in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&GAZ;ENVO_01000595"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasEducationalInstitute -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasEducationalInstitute">
+        <rdfs:comment>reprsents the number of educational institute in a city</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;City"/>
+        <rdfs:range rdf:resource="&schema;EducationalOrganization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasElectricMeter -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasElectricMeter">
+        <rdfs:comment>reprsents the  elctric meter for electricity available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ElectricMeter"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasExamHall -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasExamHall">
+        <rdfs:comment>reprsents the hall / room for examination purposes available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ExamHall"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasFacility -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasFacility">
+        <rdfs:comment>reprsents the facility available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasFan -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasFan">
+        <rdfs:comment>reprsents the number of fans available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ElectricFan"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasIntrument -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasIntrument">
+        <rdfs:comment>reprsents the instruments for experiment available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&GAZ;ERO_0000004"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Biology_Lab"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Chemisrty_Lab"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhysicsLab"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasKitchen -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasKitchen">
+        <rdfs:comment>reprsents the room for cooking available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C86562"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasLevel">
+        <rdfs:comment>reprsents the level of education available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Educational_level"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasLibrary -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasLibrary">
+        <rdfs:comment>reprsents the library havinga collection of books available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="&schema;Library"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasMainGate -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasMainGate">
+        <rdfs:comment>reprsents the  entry gate available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MainGate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasMetalDetector -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasMetalDetector">
+        <rdfs:comment>reprsents the device to detect metals at the entry of govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Metal_Detector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasNaibQasid -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasNaibQasid">
+        <rdfs:comment>reprsents the naib qasid that is responsible for management  in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasNeed -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasNeed">
+        <rdfs:comment>reprsents the  needs of the govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Need"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPhotoCopyMachine -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPhotoCopyMachine">
+        <rdfs:comment>reprsents the photocopy machine for making copies of docs available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PhotoCopy_Machine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPhysicslab -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPhysicslab">
+        <rdfs:comment>reprsents the number of physics lab in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PhysicsLab"/>
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#physicsLabOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPlant -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPlant">
+        <rdfs:comment>reprsents the plants available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&plant;T002"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPlayGround -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPlayGround">
+        <rdfs:comment>reprsents the playground for sports available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="&schema;Playground"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPrincipal -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPrincipal">
+        <rdfs:comment>reprsents the principal available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C25628"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#principalOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPrincipalOffice -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPrincipalOffice">
+        <rdfs:comment>reprsents the room for the principal available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Principal_Office"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPrintSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPrintSpecification">
+        <rdfs:comment>reprsents the printer feature available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C50120"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPrinter -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasPrinter">
+        <rdfs:comment>reprsents the printers  for printing available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C50120"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasRoom">
+        <rdfs:comment>reprsents the rooms available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="&schema;Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSection -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSection">
+        <rdfs:comment>reprsents the sectionss of the class available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C25346"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Section"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSecurityCamera -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSecurityCamera">
+        <rdfs:comment>reprsents the security camera  available in a govt school for monitorng purpose</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Security_Camera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSeurityGuard -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSeurityGuard">
+        <rdfs:comment>reprsents the security guard available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Guard;LA16804-9"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSize">
+        <rdfs:comment>reprsents the area covered by the object available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C25681"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C86562"/>
+                    <rdf:Description rdf:about="&GAZ;ENVO_01000425"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Biology_Lab"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Canteen"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Chemisrty_Lab"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Computer_Lab"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ExamHall"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#MainGate"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhysicsLab"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Principal_Office"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#StaffRoom"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#WaterCooler"/>
+                    <rdf:Description rdf:about="&schema;Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSpecifications -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSpecifications">
+        <rdfs:comment>reprsents thefeatures available in a device</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C16464"/>
+                    <rdf:Description rdf:about="&Thesaurus;C50120"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhotoCopy_Machine"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasStaffRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasStaffRoom">
+        <rdfs:comment>reprsents the staffrooms  available for teachers in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#StaffRoom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasStoreRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasStoreRoom">
+        <rdfs:comment>reprsents the store rooms available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#StoreRoom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasStudentChair -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasStudentChair">
+        <rdfs:comment>reprsents the student chairs available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#StudentChair"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSuiGasMeter -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSuiGasMeter">
+        <rdfs:comment>reprsents the sui gas meter available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sui_Gas_Meter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasSweeper -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasSweeper">
+        <rdfs:comment>reprsents the sweepers available in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasTeacher -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasTeacher">
+        <rdfs:comment>represents the teacher with in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C102873"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasTeacherTable -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasTeacherTable">
+        <rdfs:comment>represents the tables which is used by the teacher</rdfs:comment>
+        <rdfs:range rdf:resource="&GAZ;ENVO_01000584"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasTecaherChair -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasTecaherChair">
+        <rdfs:comment>reprsent the chair that is used by the teacher</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C122026"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasTehsils -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasTehsils">
+        <rdfs:comment>reprsents the tehsils in a specific city</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sargodha"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasToilet -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasToilet">
+        <rdfs:comment>represents the number of toilets avaible in govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&GAZ;ENVO_01000425"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasTree -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasTree">
+        <rdfs:comment>reprsents the number of trees availble in govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&tree;ECSO_00000501"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasWaterCooler -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasWaterCooler">
+        <rdfs:comment>reprsents the number of water coolers in the govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#WaterCooler"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasbook -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasbook">
+        <rdfs:comment>it represents the books that are availble in a library</rdfs:comment>
+        <rdfs:range rdf:resource="&schema;Book"/>
+        <rdfs:domain rdf:resource="&schema;Library"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasdesk -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasdesk">
+        <rdfs:comment>reprsentss the number of desks in the govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&GAZ;ENVO_01000585"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasfinancialfacility -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasfinancialfacility">
+        <rdfs:comment>reprsents the financial facility like grant available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Financial_Facility"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasstory -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasstory">
+        <rdfs:comment>reprsents the stories in the building available in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C87192"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ofClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ofClass">
+        <rdfs:comment>represens the books avaible in te library for a specific classs</rdfs:comment>
+        <rdfs:range rdf:resource="&Thesaurus;C25346"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseBooks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ofsubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ofsubject">
+        <rdfs:comment>represents the books of the course subject</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseBooks"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseSubject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ofyear -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ofyear">
+        <rdfs:comment>represnts the amount of the grant in a specific year</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C16644"/>
+        <rdfs:range rdf:resource="&Thesaurus;C29848"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#physicsLabOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#physicsLabOf">
+        <rdfs:comment>reprsents the number of physics lab used for physics experiment and practicals in a govt school</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PhysicsLab"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#principalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#principalOf">
+        <rdfs:comment>reprsent the principal of the govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C25628"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Control_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#Control_code">
+        <rdfs:comment>The control code of a printer refers to a set of commands or instructions used to control the printer&apos;s functions, such as printing, paper handling, and maintenance, typically communicated to the printer through a computer or printing software.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ISSNCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ISSNCode">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>represent the sncode of the book</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseBooks"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#IsB.ED -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#IsB.ED">
+        <rdfs:comment>reprsents that teacher has b.ed degree or not</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C102873"/>
+        <rdfs:range rdf:resource="&xsd;byte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Paper_feed_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#Paper_feed_speed">
+        <rdfs:comment>paper feed speed represent the speed in which printer or photocopy machine prints</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Resolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#Resolution">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>resolution reprsents the quality of the printing</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TreeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#TreeNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>number assigned to the tree</rdfs:comment>
+        <rdfs:domain rdf:resource="&tree;ECSO_00000501"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#area -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#area">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>govt school, library, playground has a specific ares</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+                    <rdf:Description rdf:about="&schema;Library"/>
+                    <rdf:Description rdf:about="&schema;Playground"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#contractperiod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#contractperiod">
+        <owl:backwardCompatibleWith>contract period  refers to time in days and month for which a teacher sign an argrment</owl:backwardCompatibleWith>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Contract_based_Teacher"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#dateOfPosting -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting">
+        <rdfs:comment>every employee has a date of posting in a school</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#designation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#designation">
+        <rdfs:comment>permanent teacher has a designation in a govt school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#generation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#generation">
+        <rdfs:comment>computer has a specification of generation</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasBoysStrenght -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasBoysStrenght">
+        <rdfs:comment>boys school and co school has a strength of boys that are studied in a school</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GSSO_012405"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Co_School"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasGirlStrenght -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasGirlStrenght">
+        <rdfs:comment>has girls strength represents the number of girls in the school</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GSSO_012406"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Co_School"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasRooms -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasRooms">
+        <rdfs:comment>story has specific number of  rooms</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C87192"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasStrenght -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasStrenght">
+        <rdfs:comment>strength refers to the number of students ina school or class</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Section"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isBroken -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isBroken">
+        <rdfs:comment>Represent physical condition of a furniture</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C122026"/>
+                    <rdf:Description rdf:about="&GAZ;ENVO_01000584"/>
+                    <rdf:Description rdf:about="&GAZ;ENVO_01000585"/>
+                    <rdf:Description rdf:about="&GAZ;ENVO_01000595"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#StudentChair"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isOccupied -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isOccupied">
+        <rdfs:comment>Represent availbility of a room</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ExamHall"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#StoreRoom"/>
+                    <rdf:Description rdf:about="&schema;Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isavailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isavailable">
+        <rdfs:comment>isavailable refers to the facility whether they ara available or not</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C25669"/>
+                    <rdf:Description rdf:about="&print;D011327"/>
+                    <rdf:Description rdf:about="&GAZ;ENVO_01000587"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Electricity_Facility"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Financial_Facility"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#First_Aid_Facility"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Gas_Facility"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#WaterFacility"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isworking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isworking">
+        <rdfs:comment>represent the working state of the devices</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C16464"/>
+                    <rdf:Description rdf:about="&Thesaurus;C50120"/>
+                    <rdf:Description rdf:about="&air;15000008"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ElectricFan"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ElectricMeter"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Metal_Detector"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhotoCopy_Machine"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Security_Camera"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sui_Gas_Meter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#manufacturer">
+        <rdfs:comment>Represent the company or branf by which the devices made</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#meterNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#meterNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Meter number used by electric company unique number given to a specific meter</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ElectricMeter"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sui_Gas_Meter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#model -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#model">
+        <rdfs:comment>represent the model of the devices</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C50120"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhotoCopy_Machine"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#needDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#needDescription">
+        <rdfs:comment>need description reprsents the need of the facility in a govt school in detail</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Need"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#neednumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#neednumber">
+        <rdfs:comment>reprsents the number that is assigned to the need of the school</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Need"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#plantName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#plantName">
+        <rdfs:comment>reprsents what type of plant is</rdfs:comment>
+        <rdfs:domain rdf:resource="&plant;T002"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#processor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#processor">
+        <rdfs:comment>processor  reprsents the processing power of the computer</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ramSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#ramSize">
+        <rdfs:comment>ram size represent the primary memory of the computer</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#scale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#scale">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>scale represents the grade of the teacher</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#storageCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#storageCapacity">
+        <rdfs:comment>storage capacity reprsents how much storage is availble in a computer</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#storyNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#storyNumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Reprenet story level like 1st 2nd</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C87192"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#trainingPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#trainingPeriod">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>training period  refers to time in days and month for which a teacher sign an argrment for gaining experience</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Training_Teacher"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#treeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#treeName">
+        <rdfs:comment>what type of tree is</rdfs:comment>
+        <rdfs:domain rdf:resource="&tree;ECSO_00000501"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="&owl;topDataProperty">
+        <rdfs:domain rdf:resource="&tree;ECSO_00000501"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://schema.org/address -->
+
+    <owl:DatatypeProperty rdf:about="&schema;address">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>addres represent the location of a school with in a sargodha city.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/amount -->
+
+    <owl:DatatypeProperty rdf:about="&schema;amount">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>amount that is given as grant to govt schools</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C16644"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/author -->
+
+    <owl:DatatypeProperty rdf:about="&schema;author">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Any book has an author</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&schema;Book"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/gender -->
+
+    <owl:DatatypeProperty rdf:about="&schema;gender">
+        <rdfs:comment>person has a gender</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/height -->
+
+    <owl:DatatypeProperty rdf:about="&schema;height">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>height reprsentsvertical measurement of an object or person, measured from its base or bottom to its highest point</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C25681"/>
+                    <rdf:Description rdf:about="&tree;ECSO_00000501"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/isbn -->
+
+    <owl:DatatypeProperty rdf:about="&schema;isbn">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>book has a unique isbn number</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&schema;Book"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="&schema;name">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>Represent name of a person place aor thing</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C25346"/>
+                    <rdf:Description rdf:about="&Thesaurus;C29848"/>
+                    <rdf:Description rdf:about="&GAZ;ERO_0000004"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#CourseSubject"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Section"/>
+                    <rdf:Description rdf:about="&schema;Book"/>
+                    <rdf:Description rdf:about="&schema;Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/qualifications -->
+
+    <owl:DatatypeProperty rdf:about="&schema;qualifications">
+        <rdfs:comment>represents how much a teacher studied</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="&schema;telephone">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>telephone eprsent the contact informaton of the person</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/width -->
+
+    <owl:DatatypeProperty rdf:about="&schema;width">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>width is the horizontal measurement of any thing</rdfs:comment>
+        <rdfs:domain rdf:resource="&Thesaurus;C25681"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C102873 -->
+
+    <owl:Class rdf:about="&Thesaurus;C102873">
+        <rdfs:label>Teacher</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <rdfs:comment>A teacher is an educator who imparts knowledge, facilitates learning, and nurtures the intellectual, social, and emotional development of students.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Thesaurus;C25628"/>
+            <rdf:Description rdf:about="&Thesaurus;C75552"/>
+            <rdf:Description rdf:about="&Guard;LA16804-9"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C122026 -->
+
+    <owl:Class rdf:about="&Thesaurus;C122026">
+        <rdfs:label>TeacherChair</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Teacher_Furniture"/>
+        <rdfs:comment>The type of chair made for specifically for the students in a govt school made of wood.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16464 -->
+
+    <owl:Class rdf:about="&Thesaurus;C16464">
+        <rdfs:label>computer</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSpecifications"/>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Specifications"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>computer refers to a device or machine used for performing practicals and also for performing school adminstration related task in Computer lab.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16644 -->
+
+    <owl:Class rdf:about="&Thesaurus;C16644">
+        <rdfs:label>Grant</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;amount"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ofyear"/>
+                <owl:onClass rdf:resource="&Thesaurus;C29848"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Financial_Facility"/>
+        <rdfs:comment>A financial assistance mechanism through which money and/or direct assistance is provided to carry out approved activities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25346 -->
+
+    <owl:Class rdf:about="&Thesaurus;C25346">
+        <rdfs:label>Class</rdfs:label>
+        <rdfs:comment>class refer to a group of students studying in a same level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25628 -->
+
+    <owl:Class rdf:about="&Thesaurus;C25628">
+        <rdfs:label>Principal</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#designation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>The principal of a school is the administrative head responsible for overseeing the overall operation and management of the educational institution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25669 -->
+
+    <owl:Class rdf:about="&Thesaurus;C25669">
+        <rdfs:label>Security</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>security facility refers to the security Services provided to the govt schools like cameras .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25681 -->
+
+    <owl:Class rdf:about="&Thesaurus;C25681">
+        <rdfs:label>Size</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;height"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;width"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Size refers to the physical dimensions or magnitude of an object or space, typically measured in terms of length, width, and height or area, volume, and capacity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29848 -->
+
+    <owl:Class rdf:about="&Thesaurus;C29848">
+        <rdfs:label>Year</rdfs:label>
+        <rdfs:comment>A year is the duration of time consisting of approximately 365 days, representing one complete orbit of the Earth around the Sun, divided into months, weeks, and days, used for measuring time and organizing events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50120 -->
+
+    <owl:Class rdf:about="&Thesaurus;C50120">
+        <rdfs:label>Printer</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasPrintSpecification"/>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&print;D011327"/>
+        <rdfs:comment>An electronic device that is designed to transfer text or images to paper or other substrate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62574 -->
+
+    <owl:Class rdf:about="&Thesaurus;C62574">
+        <rdfs:label>Facility</rdfs:label>
+        <rdfs:comment>Facility refers to the resources that are given to the Govt schools like Security, electricity , Gas etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C75552 -->
+
+    <owl:Class rdf:about="&Thesaurus;C75552">
+        <rdfs:label>Clerk</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <rdfs:comment>A clerk typically refers to an employee who performs administrative or clerical tasks such as record-keeping, filing, data entry.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Thesaurus;C102873"/>
+            <rdf:Description rdf:about="&Thesaurus;C25628"/>
+            <rdf:Description rdf:about="&Guard;LA16804-9"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C86562 -->
+
+    <owl:Class rdf:about="&Thesaurus;C86562">
+        <rdfs:label>Kitchen</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>kitchen is a place where the cooking related work can be done.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C87192 -->
+
+    <owl:Class rdf:about="&Thesaurus;C87192">
+        <rdfs:label>Story</rdfs:label>
+        <rdfs:comment>The story of a building encompasses thye height of buildng</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/LNC/LA16804-9 -->
+
+    <owl:Class rdf:about="&Guard;LA16804-9">
+        <rdfs:label>Security Guard</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>A security guard is an individual employed to protect people, property, and assets by enforcing security measures and protocols.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/MESH/D011327 -->
+
+    <owl:Class rdf:about="&print;D011327">
+        <rdfs:label>Printing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>printing facility refers to the facility provided to reproducing words or images on a physical media available in govt school</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/15000008 -->
+
+    <owl:Class rdf:about="&air;15000008">
+        <rdfs:label>Air Condional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Electricity_Facility"/>
+        <rdfs:comment>Air Conditional refers to the  air conditioners resources like window or wall air condiotional that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/STY/T002 -->
+
+    <owl:Class rdf:about="&plant;T002">
+        <rdfs:label>Plant</rdfs:label>
+        <rdfs:comment>A plant is a multicellular organism with specialized structures for photosynthesis and reproduction, encompassing a diverse range of species, from flowering plants to ferns and mosses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000501 -->
+
+    <owl:Class rdf:about="&tree;ECSO_00000501">
+        <rdfs:label>Tree</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#TreeNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A tree is a perennial woody plant with a single main trunk, branches, and leaves, typically providing oxygen, shade, and habitat for various organisms.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000425 -->
+
+    <owl:Class rdf:about="&GAZ;ENVO_01000425">
+        <rdfs:label>Toilet</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A toilet is a sanitation fixture used for human waste disposal, typically consisting of a bowl connected to a drainage system for flushing waste away.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000584 -->
+
+    <owl:Class rdf:about="&GAZ;ENVO_01000584">
+        <rdfs:label>Teacher_Table</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Teacher_Furniture"/>
+        <rdfs:comment>A teacher table is a piece of furniture that serves as a workspace for the teacher, providing a dedicated area which they use in class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000585 -->
+
+    <owl:Class rdf:about="&GAZ;ENVO_01000585">
+        <rdfs:label>Desk</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Student_Furniture"/>
+        <rdfs:comment>student desk refers to a table type having a seat for three children with a space in front of it for putting things on it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000587 -->
+
+    <owl:Class rdf:about="&GAZ;ENVO_01000587">
+        <rdfs:label>Furniture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>Furniture refers to movable objects intended to support various activities such as  chairs, tables which may be teacher and student which are availble in GOvt schools</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000595 -->
+
+    <owl:Class rdf:about="&GAZ;ENVO_01000595">
+        <rdfs:label>Cupboard</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GAZ;ENVO_01000587"/>
+        <rdfs:comment>cupboards are referred to the resource that are used for storage purposes like to  store teaching materials, textbooks, stationery, administrative documents, and other educational resources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ERO_0000004 -->
+
+    <owl:Class rdf:about="&GAZ;ERO_0000004">
+        <rdfs:label>Instrument</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;name"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Instrument are the devices that are used to experiment in the labs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GAZ_00080584 -->
+
+    <owl:Class rdf:about="&GAZ;GAZ_00080584">
+        <rdfs:label>Sillanwali</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080585"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080586"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080587"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080588"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>Sillanwali is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in the Sillanwali region of its district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GAZ_00080585 -->
+
+    <owl:Class rdf:about="&GAZ;GAZ_00080585">
+        <rdfs:label>ShahPur</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080584"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080586"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080587"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080588"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>ShahPur is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in the ShahPur  region of its district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GAZ_00080586 -->
+
+    <owl:Class rdf:about="&GAZ;GAZ_00080586">
+        <rdfs:label>Bhalwal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080584"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080585"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080587"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080588"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>Bhalwal Tehsil is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in the Bhalwal region of its district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GAZ_00080587 -->
+
+    <owl:Class rdf:about="&GAZ;GAZ_00080587">
+        <rdfs:label>Sahiwal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080584"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080585"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080586"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080588"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>Sahiwal Tehsil is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in the Sahiwal  region of its district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GAZ_00080588 -->
+
+    <owl:Class rdf:about="&GAZ;GAZ_00080588">
+        <rdfs:label>Sargodha Tehsil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080584"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080585"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080586"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080587"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>&apos;Sargodha Tehsil&apos; is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in the &apos;Sargodha  region of its district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GSSO_012405 -->
+
+    <owl:Class rdf:about="&GAZ;GSSO_012405">
+        <rdfs:label>Boys School</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:comment>Boys School  refers to the school where the students are only boys.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GAZ;GSSO_012406"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Co_School"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GSSO_012406 -->
+
+    <owl:Class rdf:about="&GAZ;GSSO_012406">
+        <rdfs:label>Girl School</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:comment>Girl School  refers to the school where the students are only Girls</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GAZ;GSSO_012405"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Co_School"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Admission_Controller -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <rdfs:comment>Admission_Controller is a person who are responsible for admission related tasks</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Thesaurus;C25628"/>
+            <rdf:Description rdf:about="&Guard;LA16804-9"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Badminton_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Badminton_Facility">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility"/>
+        <rdfs:comment>Badminton_Facility refers to the resources related to badminton like Court Layout,Net and Posts that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <rdfs:comment>Behra Tehsil is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in the Behra region of its district.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GAZ;GAZ_00080584"/>
+            <rdf:Description rdf:about="&GAZ;GAZ_00080585"/>
+            <rdf:Description rdf:about="&GAZ;GAZ_00080586"/>
+            <rdf:Description rdf:about="&GAZ;GAZ_00080587"/>
+            <rdf:Description rdf:about="&GAZ;GAZ_00080588"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Biology_Lab -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Biology_Lab">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A lab where students perform biology practicals and experiments in a school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Canteen -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Canteen">
+        <rdfs:comment>A place where the students can buy things in a school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Chemisrty_Lab -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Chemisrty_Lab">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A lab where students perform Chemistry practicals and experiments in a school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Co_School -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Co_School">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Govt_School"/>
+        <rdfs:comment>CO_School  refers to the school where the students are both Girls and boys.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&GAZ;GSSO_012405"/>
+            <rdf:Description rdf:about="&GAZ;GSSO_012406"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Computer_Lab -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Computer_Lab">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A lab where students perform Computer practicals and experiments in a school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Contract_based_Teacher -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Contract_based_Teacher">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C102873"/>
+        <rdfs:comment>A contract-based teacher is an educator who is employed on a contractual basis .They may be hired to cover temporary vacancies, teach specific subjects or courses, or provide specialized instruction for a predetermined period.</rdfs:comment>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Training_Teacher"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CourseBooks -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#CourseBooks">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ofsubject"/>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseSubject"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ISSNCode"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CourseFacility"/>
+        <rdfs:comment>CourseBooks refers to the course related books that are availble to the Govt schools</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CourseFacility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#CourseFacility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>CourseFacility refers to the course related resources like books that are given to the Govt schools</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CourseSubject -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#CourseSubject">
+        <rdfs:comment>course subject refers to the subject like urdu english that is taught to the students in a specific class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Cricket_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Cricket_Facility">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility"/>
+        <rdfs:comment>Cricket_Facility refers to the resources related to cricket like designated grounds or venues equipped with cricket pitches, practice nets for playing and spectating cricket matches and training sessions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Cricket_PlayGround -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Cricket_PlayGround">
+        <rdfs:subClassOf rdf:resource="&schema;Playground"/>
+        <rdfs:comment>A cricket playground is an outdoor sports facility equipped with a cricket pitch, boundary lines, and seating areas, designed to accommodate cricket matches, practice sessions, and recreational play.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Educational_level -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Educational_level">
+        <rdfs:comment>Educational level refers to the levels like middle , high in a school system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricFan -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ElectricFan">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Electricity_Facility"/>
+        <rdfs:comment>Electric Fan refers to the fans that are mounted on wall and roof  that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricMeter -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ElectricMeter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#meterNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Electricity_Facility"/>
+        <rdfs:comment>electric meter refers to the meter that provide the electiricity to the specific building or location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Electricity_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Electricity_Facility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>Electricity_Facility refers to the Electricity related resources like electric fan, ElectricMeter that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ExamHall -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ExamHall">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A big area l that is specificly reserved for taking exams.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FacilityNeed -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#FacilityNeed">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Need"/>
+        <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/ont.owl#HumanResourcesNeed"/>
+        <rdfs:comment>facility Need refers to the resources  which are the required for the facility of govt school like electricity, gas, security .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Financial_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Financial_Facility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>Financial_Facility refers to the Financial related resources like grant for various activities In a specific year that are given to the Govt schools</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#First_Aid_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#First_Aid_Facility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>First_Aid_Facility refers to the resources that  supplies and equipment for administering immediate medical assistance in case of injury or illness..</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FootBall_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#FootBall_Facility">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility"/>
+        <rdfs:comment>FootBall_Facility refers to the resources related to football like stadiums equipped with goalposts, seating areas, and amenities for playing and watching football matches.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FootBall_PlayGround -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#FootBall_PlayGround">
+        <rdfs:subClassOf rdf:resource="&schema;Playground"/>
+        <rdfs:comment>A football playground is an outdoor sports facility featuring goalposts, boundary lines, and seating areas, designed for football matches, training sessions, and recreational play</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Gas_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Gas_Facility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>Gas_Facility refers to the gas related resources like gas meters that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Govt_School -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Govt_School">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasAdmissionController"/>
+                        <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasPrincipal"/>
+                        <owl:onClass rdf:resource="&Thesaurus;C25628"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&schema;name"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;EducationalOrganization"/>
+        <rdfs:comment>Govt_School refers to the school that are under the government.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Hockey_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hockey_Facility">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility"/>
+        <rdfs:comment>Hockey_Facility refers to the resources related to hockey like  designated rinks or fields equipped with goals and amenities for playing and spectating hockey matches.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Hockey_Playground -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hockey_Playground">
+        <rdfs:subClassOf rdf:resource="&schema;Playground"/>
+        <rdfs:comment>A hockey playground is an outdoor sports facility with marked rinks, goalposts, and seating areas, tailored for hockey matches, training sessions, and recreational play.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#HumanResourcesNeed -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#HumanResourcesNeed">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Need"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#FacilityNeed"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Infrastructure_Needs"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>Humamn Resource Need refers to the resources  which are the required for the human resources of govt school like teachers, clerks principal etc .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Infrastructure_Needs -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Infrastructure_Needs">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Need"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#FacilityNeed"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#HumanResourcesNeed"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>Infrastructure Need refers to the resources  which are the required for the infrastructure  of govt school like rooms, toilets, labs etc .</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Kot_Momin -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Kot_Momin">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Tehsil"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080584"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080585"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080586"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080587"/>
+                    <rdf:Description rdf:about="&GAZ;GAZ_00080588"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Behra_Tehsil"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>Kot_Momin Tehsil is a subdivision within a district, usually responsible for local governance, revenue collection, and basic public services in theKot_Momin  region of its district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MainGate -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#MainGate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Main gate is the front gate of the school from where the person can enter into the school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Metal_Detector -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Metal_Detector">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C25669"/>
+        <rdfs:comment>metal detectors refers to the machine that detect metals  used by security guards for checking of individual entering in the school provided to the govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>A Naib Qasid in a government school is typically an employee responsible for performing various tasks related to general assistance, maintenance, and support within the school premises.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Need -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Need">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#needDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#neednumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Need refers to the resources  which are the requiremnts for the school like facility, Human resource and infrastructure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#designation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C102873"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Contract_based_Teacher"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Training_Teacher"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>permanent teacher is an educator who holds a permanent position of employment within an educational institution. They are typically hired on a long-term basis and enjoy job security, benefits, and opportunities for career advancement within the organization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PhotoCopy_Machine -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhotoCopy_Machine">
+        <rdfs:subClassOf rdf:resource="&print;D011327"/>
+        <rdfs:comment>An electronic device that is designed to transfer text or images to paper or other substrate and also provided to make copies of docs , images etc available in govt school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PhysicsLab -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PhysicsLab">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A lab where students perform physics practicals and experiments in a school.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Principal_Office -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Principal_Office">
+        <rdfs:comment>The principal&apos;s office is a designated administrative space within a school, serving as the primary workspace for the school&apos;s principal and typically used for meetings, administrative tasks, and student disciplinary matters.</rdfs:comment>
+        <rdfs:comment>Principal Office</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PrinterSpecification">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Resolution"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Control_code"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ramSize"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#model"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Printer specifications typically include details such as print speed, resolution, connectivity options, paper handling capabilities, and supported media sizes and types.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sargodha -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sargodha">
+        <rdfs:subClassOf rdf:resource="&schema;City"/>
+        <rdfs:comment>Sargodha is a city in a Pakistan in which govt school resources are covring in the ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Section -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Section">
+        <rdfs:comment>A specific Division of Class in a School.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Security_Camera -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Security_Camera">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C25669"/>
+        <rdfs:comment>security camera refers to the cameras that record all the things 24/7 That put on the specific places in the school used for monitoring purposes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Specifications -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Specifications">
+        <rdfs:comment>Specifications are detailed descriptions or requirements outlining the characteristics, features, and performance criteria of a device.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sport_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>Sport_Facility refers to the sports related resources like grounds, equipments for specific sport  that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StaffRoom -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#StaffRoom">
+        <rdfs:comment>A staff room is a designated area within a workplace or educational institution where employees or faculty members can relax, collaborate, and engage in informal discussions or meetings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StoreRoom -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#StoreRoom">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A place where the school extra material or unsed material is kept.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StudentChair -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#StudentChair">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Student_Furniture"/>
+        <rdfs:comment>student chair refers to a piece of furniture that are to provide students with a comfortable and supportive steating option conducive to learning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Student_Furniture -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Student_Furniture">
+        <rdfs:subClassOf rdf:resource="&GAZ;ENVO_01000587"/>
+        <rdfs:comment>Student_Furniture refers to movable objects that are Used by the stundets such as  chairs, desk which are availble in GOvt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sui_Gas_Meter -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sui_Gas_Meter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#meterNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gas_Facility"/>
+        <rdfs:comment>sui gas meter refers to the meter that provide the gas to the specific building or location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sweeper -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Sweeper">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#scale"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#dateOfPosting"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&schema;Person"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Thesaurus;C102873"/>
+                    <rdf:Description rdf:about="&Thesaurus;C25628"/>
+                    <rdf:Description rdf:about="&Thesaurus;C75552"/>
+                    <rdf:Description rdf:about="&Guard;LA16804-9"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Admission_Controller"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Naib_Qasid"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>A sweeper is responsible for maintaining cleanliness by sweeping, mopping, dusting, and emptying trash receptacles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Table_Tennis_Facility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Table_Tennis_Facility">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Sport_Facility"/>
+        <rdfs:comment>Table_Tennis_Facility refers to the resources related to table tennis like indoor spaces or venues furnished with table tennis tables and amenities for playing and watching table tennis matches.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Teacher_Furniture -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Teacher_Furniture">
+        <rdfs:subClassOf rdf:resource="&GAZ;ENVO_01000587"/>
+        <rdfs:comment>Teacher_Furniture refers to movable objects that are used by the teachers such as  chairs, table which are availble in GOvt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Tehsil -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Tehsil">
+        <rdfs:comment>A tehsil is an administrative division or sub-district within a district, typically responsible for local governance, revenue collection, and providing basic public services in rural or semi-urban areas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Training_Teacher -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Training_Teacher">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C102873"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Contract_based_Teacher"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Permanent_Teacher"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>A training teacher is an experienced educator who specializes in providing professional development and training to other teachers. Training teachers may conduct workshops, seminars, coaching sessions, and in-service training programs for both new and experienced educators.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#VolleyBall_Playground -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#VolleyBall_Playground">
+        <rdfs:subClassOf rdf:resource="&schema;Playground"/>
+        <rdfs:comment>A volleyball playground is an outdoor sports facility featuring a marked court, net, boundary lines, and seating areas, designed for volleyball matches, training sessions, and recreational play.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#WaterCooler -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#WaterCooler">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#WaterFacility"/>
+        <rdfs:comment>A water cooler is a dispensing device designed to provide chilled or room temperature drinking water.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#WaterFacility -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#WaterFacility">
+        <rdfs:subClassOf rdf:resource="&Thesaurus;C62574"/>
+        <rdfs:comment>Water_Facility refers to the water related resources like water cooler that are given to the Govt schools.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Book -->
+
+    <owl:Class rdf:about="&schema;Book">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;name"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;author"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;isbn"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>any kind of book available in a school library</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/City -->
+
+    <owl:Class rdf:about="&schema;City">
+        <rdfs:comment>city a part of a country having a specific name and area</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/EducationalOrganization -->
+
+    <owl:Class rdf:about="&schema;EducationalOrganization">
+        <rdfs:comment>EducationalOrganization refers to the organizations related to education  like govt schools</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/ElementarySchool -->
+
+    <owl:Class rdf:about="&schema;ElementarySchool">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Educational_level"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;HighSchool"/>
+                    <rdf:Description rdf:about="&schema;MiddleSchool"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>ElementarySchool refers to the level of education where classes are from playgroup to 5 class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/HighSchool -->
+
+    <owl:Class rdf:about="&schema;HighSchool">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Educational_level"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;ElementarySchool"/>
+                    <rdf:Description rdf:about="&schema;MiddleSchool"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>HighSchool refers to the level of education where classes are from playgroup to 10 class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Library -->
+
+    <owl:Class rdf:about="&schema;Library">
+        <rdfs:comment>A library is a resource center where a collection of books, digital media, and other materials, providing access to knowledge, research, and recreational reading for the public or specific communities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/MiddleSchool -->
+
+    <owl:Class rdf:about="&schema;MiddleSchool">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Educational_level"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;ElementarySchool"/>
+                    <rdf:Description rdf:about="&schema;HighSchool"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:comment>MiddleSchool refers to the level of education where classes are from playgroup to 8 class.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+    <owl:Class rdf:about="&schema;Person">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&schema;name"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Person refers to the humans like teachers, clerks , principals etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Playground -->
+
+    <owl:Class rdf:about="&schema;Playground">
+        <rdfs:comment>A playground is an outdoor recreational area equipped with structures, equipment, and amenities designed to provide children with opportunities for physical activity, play, and social interaction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Room -->
+
+    <owl:Class rdf:about="&schema;Room">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasSize"/>
+                <owl:onClass rdf:resource="&Thesaurus;C25681"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A room is a defined space within a building enclosed by walls, typically used for specific activities such asworking, or storing items.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
